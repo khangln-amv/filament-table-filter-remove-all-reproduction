@@ -37,10 +37,10 @@ class UsersTable
                           ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                Filter::make('email_verified_at')->toggle()->label('Email verified'),
+                Filter::make('email_verified_at')->toggle()->label('Email verified')->default(),
                 SelectFilter::make('email')
                     ->options([
-                        'filamentphp.com' => 'filamentphp.com',
+                        'filamentphp.com' => 'from filament',
                         'others'          => 'others',
                     ])
                     ->default('filamentphp.com')
